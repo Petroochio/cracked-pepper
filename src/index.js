@@ -42,7 +42,6 @@ const pepper = renderer => {
     halfWidth = w / 2;
 
     width = w > h ? height = h / 3 : height = w / 3;
-    console.log('w:', width, 'h:', height, 'w/2:', halfWidth);
   };
 
   /**
@@ -58,6 +57,11 @@ const pepper = renderer => {
     camera.matrixWorld.decompose(this.pos, this.quat, this.scale);
   };
 
+  /**
+   * Updated camera position and sets look at
+   * @param {THREE.Vector3} center : center of scene
+   * @return {object} cameras : all updated cameras
+   */
   const updateCameras = center => {
     R.forEach(camera => {
       camera.position.copy(this.pos);
@@ -80,17 +84,30 @@ const pepper = renderer => {
     right.translateX(this.viewDistance);
     right.lookAt(center);
     right.rotation.x += Math.PI / 2;
+
+    return cameras;
   };
 
+  /**
+   * Updated camera position and sets look at
+   * @param {THREE.Scene} scene : scene to render
+   * @param {THREE.PerspectiveCamera} camera : camera to render with
+   * @param {Array[float]} cutParams : 4 length array for renderer scissor
+   */
   const renderCut = (scene, camera, cutParams) => {
     renderer.setScissor(...cutParams);
     renderer.setViewport(...cutParams);
     renderer.render(scene, camera);
   };
 
+  /**
+   * Renders split view of scene
+   * @param {THREE.Scene} scene : scene to render
+   * @return this
+   */
   this.render = scene => {
-    updateCameras(scene.position);
-    const [front, back, left, right] = cameras;
+    // Update and get reference to cameras
+    const [front, back, left, right] = updateCameras(scene.position);
 
     this.renderer.clear();
     this.renderer.setScissorTest(true);
