@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb/base",
+  "rules": {
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+    "no-param-reassign": 1,
+    "no-shadow": 1,
+    "default-case": 0,
+    "new-cap": 0,
+    "func-names": 0,
+    "no-else-return": 0,
+    "padded-blocks": 0,
+    "prefer-template": 0,
+    "no-unused-vars": 1,
+    "prefer-arrow-callback": 1,
+    "no-param-reassign": 0,
+  }
+}
