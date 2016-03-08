@@ -82,12 +82,32 @@ const pepper = renderer => {
     right.rotation.x += Math.PI / 2;
   };
 
+  const renderCut = (scene, camera, cutParams) => {
+    renderer.setScissor(...cutParams);
+    renderer.setViewport(...cutParams);
+    renderer.render(scene, camera);
+  };
+
   this.render = scene => {
     updateCameras(scene.position);
+    const [front, back, left, right] = cameras;
 
     this.renderer.clear();
     this.renderer.setScissorTest(true);
 
+    const cutScene = R.curry(renderCut)(scene);
+
+    const cutStart = halfWidth - (width / 2);
+    // cut front
+    cutScene(front, [cutStart, height * 2, width, height]);
+    // cut back
+    cutScene(back, [cutStart, 0, width, height]);
+    // cut left
+    cutScene(left, [cutStart - width, height * 2, width, height]);
+    // cut right
+    cutScene(right, [cutStart + width, height * 2, width, height]);
+
+    renderer.setScissorTest(false);
   };
 };
 
