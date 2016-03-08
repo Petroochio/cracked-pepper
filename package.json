@@ -1,0 +1,23 @@
+{
+  "name": "cracked-pepper",
+  "version": "0.1.0",
+  "description": "Pepper's Ghost camera for threejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Petroochio/cracked-pepper.git"
+  },
+  "keywords": [
+    "threejs",
+    "peppers-ghost"
+  ],
+  "author": "Peter Gyory",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Petroochio/cracked-pepper/issues"
+  },
+  "homepage": "https://github.com/Petroochio/cracked-pepper#readme"
+}
