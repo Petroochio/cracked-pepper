@@ -12,6 +12,5 @@
     "prefer-template": 0,
     "no-unused-vars": 1,
     "prefer-arrow-callback": 1,
-    "no-param-reassign": 0,
   }
 }
