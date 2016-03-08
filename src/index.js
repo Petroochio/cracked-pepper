@@ -31,8 +31,12 @@ const pepper = renderer => {
   let height;
   let width;
 
-  this.setSize = (width, height) => {
+  this.setSize = (w, h) => {
+    renderer.setSize(w, h);
+    halfWidth = w / 2;
 
+    width = w > h ? height = h / 3 : height = w / 3;
+    console.log('w:', width, 'h:', height, 'w/2:', halfWidth);
   };
 
   this.render = () => {
