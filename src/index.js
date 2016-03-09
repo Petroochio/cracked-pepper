@@ -120,9 +120,9 @@ const pepper = function (renderer) {
     // cut back
     cutScene(back, [cutStart, 0, width, height]);
     // cut left
-    cutScene(left, [cutStart - width, height * 2, width, height]);
+    cutScene(left, [cutStart - width, height, width, height]);
     // cut right
-    cutScene(right, [cutStart + width, height * 2, width, height]);
+    cutScene(right, [halfWidth + (width / 2), height, width, height]);
 
     renderer.setScissorTest(false);
   };
