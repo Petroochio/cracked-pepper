@@ -18,7 +18,7 @@ var CrackedPepper = require('cracked-pepper');
 
 Pass it a THREE.WebGLRenderer instance on create
 ```javascript
-var pepperEffect = new CrackedPepper(new THREE.WebGLRenderer);
+var pepperEffect = new CrackedPepper(new THREE.WebGLRenderer());
 ```
 
 Pass in the scene you want to project and have it render
@@ -29,6 +29,11 @@ pepperEffect.render(scene);
 Set the size properly
 ```javascript
 pepperEffect.setSize(width, height);
+```
+
+Set the distance that the cameras are from the center of your scene
+```javascript
+pepperEffect.viewDistance = 100
 ```
 
 ## Examples coming soon!
