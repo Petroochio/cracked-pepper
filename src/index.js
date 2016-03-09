@@ -6,7 +6,7 @@ import { PerspectiveCamera, Vector3, Quaternion } from 'three';
  * Constructor for peppers ghost effect renderer
  * @param {THREE.WebGLRenderer} renderer
  */
-const pepper = renderer => {
+const pepper = function (renderer) {
   // Public vars
   this.pos = new Vector3(); // Position
   this.quat = new Quaternion(); // Quaternion
