@@ -6,6 +6,7 @@ import CrackedPepper from '../../src';
 const renderer = new THREE.WebGLRenderer();
 const scene = new THREE.Scene();
 
+// test mesh
 const cubeGeo = new THREE.CubeGeometry(5, 5, 5);
 const basicMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
 const cube1 = new THREE.Mesh(cubeGeo, basicMat);
@@ -17,6 +18,7 @@ const resize = () => {
   pepperEffect.setSize(window.innerWidth, window.innerHeight);
 };
 
+// Render and update loop
 const animate = () => {
   requestAnimationFrame(animate);
   cube1.rotation.x += 0.1;
@@ -25,6 +27,7 @@ const animate = () => {
   pepperEffect.render(scene);
 };
 
+// Initialize scene and dom
 const init = () => {
   scene.add(cube1);
 
@@ -38,4 +41,5 @@ const init = () => {
   animate();
 };
 
+// yolo
 init();
