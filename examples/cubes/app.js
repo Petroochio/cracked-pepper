@@ -21,8 +21,8 @@ const resize = () => {
 // Render and update loop
 const animate = () => {
   requestAnimationFrame(animate);
-  cube1.rotation.x += 0.1;
-  cube1.rotation.y -= 0.1;
+  cube1.rotation.x += 0.01;
+  cube1.rotation.y -= 0.01;
 
   pepperEffect.render(scene);
 };
