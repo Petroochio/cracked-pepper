@@ -8,6 +8,12 @@ Pepper's Ghost is an incredibly old optical illusion used to cause objects to ap
 ## What is Cracked Pepper then?
 Well, there are plenty of videos online that let you capitalize on this illusion, but there isn't a super easy way other than borrowing the [Three.js example's code](http://threejs.org/examples/webgl_effects_peppersghost.html), which for my taste did not offer enough. I want to make this easy to use so people can take their games and experiences into reality. Sappy mission aside, these holograms are cool and some people freak out if you can give them a way to interact with them.
 
+## Installing
+Install with npm
+`npm install --save CrackedPepper`
+
+Then use a module bundler like [webpack](https://webpack.github.io/) that supports CommonJS syntax or ES2015 modules.
+
 ## How it works
 Currently it works similarly to the plugin used in the Three.js example.
 
