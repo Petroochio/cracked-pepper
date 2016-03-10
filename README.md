@@ -9,9 +9,9 @@ Pepper's Ghost is an incredibly old optical illusion used to cause objects to ap
 Well, there are pleanty of videos online that let you capitalize on this illusion, but there isn't a super easy way other than borrowing the [Three.js example's code](http://threejs.org/examples/webgl_effects_peppersghost.html), which for my taste did not offer enough. I want to make this easy to use so people can take their games and experiences into reality. Sappy mission aside, these holograms are cool and some people freak out if you can give them a way to interact with them.
 
 ## How it works
-Currently it works similarly to the plugin used in the Three.js example. 
+Currently it works similarly to the plugin used in the Three.js example.
 
-Require the library 
+Require the library
 ```javascript
 var CrackedPepper = require('cracked-pepper');
 ```
@@ -36,4 +36,4 @@ Set the distance that the cameras are from the center of your scene
 pepperEffect.viewDistance = 100
 ```
 
-## Examples coming soon!
+## [Check out these sweet examples](./examples)
