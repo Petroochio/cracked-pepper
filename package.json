@@ -16,6 +16,12 @@
     "type": "git",
     "url": "git+https://github.com/Petroochio/cracked-pepper.git"
   },
+  "files": [
+    "*.md",
+    "examples",
+    "build",
+    "lib"
+  ],
   "keywords": [
     "threejs",
     "pepper's ghost"
