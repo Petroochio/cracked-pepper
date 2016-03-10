@@ -2,12 +2,13 @@
   "name": "cracked-pepper",
   "version": "0.2.0",
   "description": "Pepper's Ghost camera for threejs",
-  "main": "./build/index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "cd src; babel ./*.js -d ../lib",
+    "build-upm": "webpack",
     "watch": "webpack --progress --color --watch",
     "build-demo": "cd examples; webpack",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && npm run build-upm",
     "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,5 +1,4 @@
-
-/* eslint-disable no-var */
+/* eslint-disable */
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
@@ -22,7 +21,7 @@ module.exports = {
 
   module: {
     loaders: [
-      { exclude: /node_modules/, loader: 'babel' },
+      { exclude: /node_modules/, loader: 'babel-loader' },
     ],
   },
 };

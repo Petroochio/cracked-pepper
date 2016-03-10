@@ -1,3 +1,4 @@
+/* eslint-disable */
 var path = require('path');
 
 module.exports = {
@@ -7,7 +8,9 @@ module.exports = {
 
   output: {
     path: path.resolve('build'),
-    filename: 'index.js',
+    filename: 'CrackedPepper.js',
+    library: 'CrackedPepper',
+    libraryTarget: 'umd'
   },
 
   module: {
